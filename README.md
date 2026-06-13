@@ -10,12 +10,12 @@
 >
 > This software generates assistive drafts and suggestions only. Every legal claim, citation, statute reference, procedural step, deadline calculation, and ground of relief must be independently verified by a qualified human practitioner before filing, advising a client, or relying on the output. The publisher accepts no liability for outputs used without verification.
 
-> 🛡️ **Privacy primitive — Reader agent invokes the gateway:** This drafting plugin's **Reader agent** (the first agent in the 6-agent pipeline) calls [pseudonymisation-gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) (MIT · Wolfgang Rush) on the user's case folder BEFORE any cloud-LLM call. Real client names · government IDs · case numbers · phone numbers · currency amounts are replaced with placeholders (`[PERSON_1]` · `[AADHAAR_1]` · `[CASE_NO_1]` · etc.) in a session-scoped in-memory token map that never touches disk. Downstream agents (Format · Drafter · Verifier · Refiner) work entirely on the sanitized text. The **Overseer agent** (the final agent) calls `desanitize()` to restore real values in the final pleading before it reaches the file system. Cloud LLM vendors never see your client's real PII.
+> 🛡️ **Privacy primitive — Reader agent invokes the gateway:** This drafting plugin's **Reader agent** (the first agent in the 6-agent pipeline) calls [pseudonymisation-gateway](https://github.com/Wolfgangrush/pseudonymisation-gateway) (MIT · wolfgang_rush) on the user's case folder BEFORE any cloud-LLM call. Real client names · government IDs · case numbers · phone numbers · currency amounts are replaced with placeholders (`[PERSON_1]` · `[AADHAAR_1]` · `[CASE_NO_1]` · etc.) in a session-scoped in-memory token map that never touches disk. Downstream agents (Format · Drafter · Verifier · Refiner) work entirely on the sanitized text. The **Overseer agent** (the final agent) calls `desanitize()` to restore real values in the final pleading before it reaches the file system. Cloud LLM vendors never see your client's real PII.
 
 
-## 🚀 Install — Wolfgang Rush marketplace
+## 🚀 Install — wolfgang_rush marketplace
 
-This plugin is part of the [Wolfgang Rush plugin family](https://github.com/Wolfgangrush/wolfgang-rush-marketplace) — 14 Indian-court drafting plugins distributed via one Claude Code marketplace.
+This plugin is part of the [wolfgang_rush plugin family](https://github.com/Wolfgangrush/wolfgang-rush-marketplace) — 14 Indian-court drafting plugins distributed via one Claude Code marketplace.
 
 **Via Claude Code (CLI) — recommended for the plugin family:**
 
@@ -265,7 +265,7 @@ This file declares all Commission-level / case-type-level / matter-level constan
 
 Minimum fields:
 
-- `forum` — exact name of the Commission (e.g. *"District Consumer Disputes Redressal Commission, Nagpur"* / *"State Consumer Disputes Redressal Commission, Maharashtra"* / *"National Consumer Disputes Redressal Commission, New Delhi"*)
+- `forum` — exact name of the Commission (e.g. *"District Consumer Disputes Redressal Commission, [bench city]"* / *"State Consumer Disputes Redressal Commission, Maharashtra"* / *"National Consumer Disputes Redressal Commission, New Delhi"*)
 - `case_type` — one of the ten supported case types
 - `case_number_year` — current year for case-number placeholder
 - `pecuniary_tier` — *"district"* (≤ ₹1 crore) / *"state"* (₹1 crore — ₹10 crore) / *"national"* (> ₹10 crore)
@@ -318,7 +318,7 @@ The MIT licence is the most permissive widely-recognised open-source licence. An
 
 ## Sibling plugins
 
-This plugin is one in the **Wolfgang Rush** family of Indian legal-drafting plugins. All thirteen siblings ship under the same six-agent pipeline (Reader → Format → Drafter → Verifier → Refiner → Overseer) and the family-of-plugins doctrine — each plugin narrowly scoped to one practice area / forum:
+This plugin is one in the **wolfgang_rush** family of Indian legal-drafting plugins. All thirteen siblings ship under the same six-agent pipeline (Reader → Format → Drafter → Verifier → Refiner → Overseer) and the family-of-plugins doctrine — each plugin narrowly scoped to one practice area / forum:
 
 | Plugin | GitHub repo | Scope |
 |---|---|---|
@@ -363,7 +363,7 @@ Per-bench deep validation will arrive in the order advocates contribute.
 
 Advocates with regular consumer-forum / medical-negligence / product-liability practice are invited to contribute bench-config calibration for the specific Commission they practise before. Open a GitHub issue with:
 
-- Your practice Commission (e.g., *"District Consumer Disputes Redressal Commission, Nagpur"* / *"State Consumer Disputes Redressal Commission, Maharashtra"* / *"NCDRC New Delhi"*)
+- Your practice Commission (e.g., *"District Consumer Disputes Redressal Commission, [bench city]"* / *"State Consumer Disputes Redressal Commission, Maharashtra"* / *"NCDRC New Delhi"*)
 - Your Commission's Cause Title format
 - Your Commission's case-number convention
 - Your Commission's filing-counter conventions (annexure markers / index format / verification format)
@@ -387,7 +387,7 @@ Issues raised with reproducible context are handled on a best-effort basis; this
 
 ## Author and brand
 
-The author is **Rushikesh R. Mahajan**, Advocate, practising before the Bombay High Court, Nagpur Bench. The plugin is published under the open-source brand **Wolfgang Rush**, which is the author's publishing handle for legal-technology infrastructure. Personal accountability under the Advocates Act 1961 attaches to the author regardless of the use of a publishing handle.
+The author is **Rushikesh R. Mahajan**, Advocate, practising before the High Courts of India. The plugin is published under the open-source brand **wolfgang_rush**, which is the author's publishing handle for legal-technology infrastructure. Personal accountability under the Advocates Act 1961 attaches to the author regardless of the use of a publishing handle.
 
 ---
 

@@ -55,7 +55,7 @@ filing_fee: "Tiered fee under the Consumer Protection (Consumer Disputes Redress
 
 ## State Commission circuit-bench discipline
 
-Several State Commissions operate through circuit benches (e.g., Maharashtra State Commission has circuit benches at Aurangabad / Nagpur / Pune in addition to the principal bench at Mumbai). The Drafter selects the circuit bench by reference to the territorial-jurisdiction anchor in `case-config.md`. Where the circuit bench is not in regular session, the Complaint is filed at the principal bench with a request for transfer to the circuit bench under Section 47(1)(c).
+Several State Commissions operate through circuit benches (e.g., Maharashtra State Commission has circuit benches at Aurangabad / [bench city] / Pune in addition to the principal bench at Mumbai). The Drafter selects the circuit bench by reference to the territorial-jurisdiction anchor in `case-config.md`. Where the circuit bench is not in regular session, the Complaint is filed at the principal bench with a request for transfer to the circuit bench under Section 47(1)(c).
 
 ## Section 49 — State Commission powers
 
