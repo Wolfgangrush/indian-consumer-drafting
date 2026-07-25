@@ -13,6 +13,21 @@ Visit the live site: [wolfgangrush.github.io](https://wolfgangrush.github.io)
 </div>
 
 
+<div align="center">
+
+<img src="docs/banner.png" width="820"/>
+
+**Claude-compatible plugin for drafting Indian consumer-protection and medical-negligence pleadings before District / State / NCDRC Commissions**
+
+Visit the live site: [wolfgangrush.github.io](https://wolfgangrush.github.io)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Wolfgangrush/indian-consumer-drafting/pulls)
+[![GitHub Repo](https://img.shields.io/badge/wolfgang__rush-eleventh--plugin-8A2BE2)](https://github.com/Wolfgangrush)
+
+</div>
+
+
 # indian-consumer-drafting
 
 > **Open-source Claude-compatible plugin for drafting Indian consumer-protection, medical-negligence, product-liability, unfair-trade-practice, and consumer-appeal pleadings.**
